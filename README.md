@@ -4,4 +4,4 @@
 
 ## Nos servimos de una animacion para ir cambiando el valor de esta propiedad
 
-![Image text](assets/banner.png);
+![Image text](assets/banner.png)
