@@ -1,0 +1,72 @@
+@font-face {
+  font-family: "Pokemon";
+  src: url("assets/Pokemon_Solid.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@property --num {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: radial-gradient(white, red);
+  padding: 2rem;
+}
+.sub_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: -100px;
+}
+.imagen {
+  width: 100%;
+  height: auto;
+  margin-top: -70px;
+}
+
+.pokemon {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 6rem;
+  color: #f7c406;
+  -webkit-text-stroke: 5px #385aa1;
+  margin: 0;
+}
+
+#contador {
+  animation: counter 7s ease-in-out;
+  animation-fill-mode: forwards;
+  counter-reset: num var(--num);
+  font-family: "Pokemon";
+  font-size: 5rem;
+  color: #f7c406;
+  -webkit-text-stroke: 5px #385aa1;
+  letter-spacing: 10px;
+  height: auto;
+  margin-top: -60px;
+}
+
+#contador::after {
+  content: counter(num);
+}
+
+@keyframes counter {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 151;
+  }
+}
